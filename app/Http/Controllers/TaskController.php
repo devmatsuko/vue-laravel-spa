@@ -31,4 +31,11 @@ class TaskController extends Controller
         $task->update($request->all());
         return $task;
     }
+
+    // タスク削除
+    public function destroy(Task $task)
+    {
+        $task->delete();
+        return $task;
+    }
 }
