@@ -12,4 +12,10 @@ class TaskController extends Controller
     {
         return Task::all();
     }
+
+    // タスク詳細
+    public function show(Task $task)
+    {
+        return $task;
+    }
 }
