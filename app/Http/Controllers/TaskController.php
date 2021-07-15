@@ -13,6 +13,12 @@ class TaskController extends Controller
         return Task::all();
     }
 
+    // タスク登録
+    public function store(Request $request)
+    {
+        return Task::create($request->all());
+    }
+
     // タスク詳細
     public function show(Task $task)
     {
